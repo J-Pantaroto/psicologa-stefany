@@ -3,5 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
         duration: 1200,
         once: true,
         easing: 'ease-in-out',
+        mirror: false,
+        offset: 50,
     });
 });
