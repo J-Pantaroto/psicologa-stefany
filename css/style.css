@@ -98,6 +98,7 @@
 }
 
 @media (max-width: 768px) {
+
     /* Remove a imagem no mobile */
     .desktop-only {
         display: none;
@@ -445,7 +446,6 @@ h2 {
 
 /* Seção Sobre Mim */
 #about-me {
-    background-color: var(--secondary-white);
     padding: 80px 0;
 }
 
@@ -493,80 +493,194 @@ b {
 /* Footer */
 #footer {
     width: 100%;
-    background-color: var(--primary-color);
-    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--font-color);
     font-weight: lighter;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    transition: background 0.3s ease-in-out;
+
 }
 
-/* Container da imagem */
-.about-image-container {
-    position: relative;
-    display: inline-block;
-}
-
-/* Botão Saiba Mais */
-.about-btn {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--primary-color);
-    color: white;
-    padding: 10px 20px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.about-btn:hover {
-    background-color: var(--secondary-color);
-}
-
-/* Seção escondida inicialmente */
-.about-content {
-    background-color: var(--secondary-white);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    margin-top: 20px;
+/* Container principal */
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: auto;
+    gap: 30px;
+    padding: 40px 20px;
 }
 
 /* Mosaico de imagens */
 .image-mosaic {
     display: flex;
+    flex-direction: column;
     gap: 10px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 20px;
+    width: 50%;
 }
 
-.image-mosaic img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
+/* Imagem principal com overlay */
+.main-image {
+    position: relative;
+}
+
+.main-image img {
+    width: 100%;
     border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
 }
 
-.image-mosaic img:hover {
-    transform: scale(1.1);
+
+/* Grid de imagens secundárias */
+.mosaic-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.mosaic-grid img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Texto ao lado */
+.about-text {
+    width: 45%;
+    background: var(--secondary-white);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.about-text h2 {
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+.about-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-text li {
+    font-size: 16px;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.about-text li::before {
+    content: "✔";
+    /* Ícone antes de cada item */
+    color: var(--emphasis-color);
+    margin-right: 10px;
+    font-weight: bold;
 }
 
 /* Responsividade */
-@media screen and (max-width: 768px) {
-    .about-image img {
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-mosaic {
         width: 100%;
     }
 
-    .about-btn {
-        font-size: 14px;
-        padding: 8px 15px;
+    .about-text {
+        width: 100%;
+        text-align: center;
     }
+}
 
-    .image-mosaic img {
-        width: 80px;
-        height: 80px;
+
+#participacoes {
+    background: var(--primary-color);
+    padding: 80px 20px;
+}
+
+/* Estilo do mosaico de imagens */
+.participacoes-mosaic {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.participacoes-mosaic img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Lista de palestras */
+.participacoes-list {
+    list-style: none;
+    padding: 0;
+    color: var(--font-color);
+}
+
+.participacoes-list li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.participacoes-list a {
+    color: var(--font-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.participacoes-list a:hover {
+    text-decoration: underline;
+}
+#midia {
+    background: var(--primary-color);
+    padding: 80px 20px;
+}
+
+/* Estrutura do dispositivo */
+.device-frame {
+    position: relative;
+    width: 100%;
+    max-width: 250px; /* Tamanho padrão */
+    margin: auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Diferentes tamanhos de dispositivos */
+.phone-frame {
+    max-width: 180px;
+    border-radius: 30px;
+}
+
+.tablet-frame {
+    max-width: 220px;
+    border-radius: 20px;
+}
+
+.laptop-frame {
+    max-width: 280px;
+    border-radius: 5px;
+}
+
+/* Imagem sobreposta dentro do dispositivo */
+.device-content {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Ajuste responsivo */
+@media (max-width: 768px) {
+    .midia-item {
+        margin-bottom: 40px;
     }
 }
