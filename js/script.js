@@ -15,3 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    let video = document.getElementById("videoPreview");
+    setTimeout(() => { video.pause(); }, 100); // Pausa o vídeo logo após o primeiro frame
+});

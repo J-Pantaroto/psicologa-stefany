@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Psicóloga Stefany O. Pantaroto</title>
-    <link rel="icon" type="img/png" sizes="16x16"  href="img/favicon.png">
+    <link rel="icon" type="img/png" sizes="16x16" href="img/favicon.png">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -65,9 +65,8 @@
 
                     <!-- Vídeo -->
                     <div class="video-container mt-3">
-                        <video width="100%" controls>
+                        <video id="videoPreview" width="100%" controls muted autoplay loop playsinline>
                             <source src="video/apresentacao.mp4" type="video/mp4">
-                            Seu navegador não suporta a reprodução de vídeo.
                         </video>
                     </div>
 
@@ -162,32 +161,37 @@
         <div class="container">
             <div class="row align-items-center">
                 <!-- Mosaico de Imagens -->
-                <div class="col-md-8">
+                <div class="col-md-8"  data-aos="fade-up">
                     <div class="participacoes-mosaic">
-                        <img data-aos="fade-down" src="img/palestra5.jpg" alt="Palestra 1">
-                        <img data-aos="fade-down" src="img/palestra4.jpg" alt="Palestra 4">
-                        <img data-aos="fade-up" src="img/palestra2.png" alt="Palestra 2">
-                        <img data-aos="fade-up" src="img/palestra3.jpg" alt="Palestra 3">
+                        <img src="img/palestra5.jpg" alt="Palestra 1">
+                        <img src="img/palestra4.jpg" alt="Palestra 4">
+                        <img src="img/palestra2.png" alt="Palestra 2">
+                        <img src="img/palestra3.jpg" alt="Palestra 3">
                     </div>
                 </div>
-    
+
                 <!-- Lista de Participações -->
-                <div class="col-md-4" data-aos="fade-left">
+                <div class="col-md-4" data-aos="fade-down">
                     <h2 class="text-light">Participações</h2>
                     <ul class="participacoes-list">
-                        <li><a href="https://www.youtube.com/live/KbEcfydqnNM?si=HPsQrkV-ujikLfJz" target="_blank">Entendendo o Papel da Psicologia em torno da Criança | Stefany Pantaroto</a> - Brapsi</li>
-                        <li><a href="https://www.youtube.com/live/MkRgcY7OocU?si=U9LZObhSn38YQSz0" target="_blank">Depressão e Suicídio na Adolescência | Stefany O. Pantaroto</a> - Brapsi</li>
+                        <li><a href="https://www.youtube.com/live/KbEcfydqnNM?si=HPsQrkV-ujikLfJz"
+                                target="_blank">Entendendo o Papel da Psicologia em torno da Criança | Stefany
+                                Pantaroto</a> - Brapsi</li>
+                        <li><a href="https://www.youtube.com/live/MkRgcY7OocU?si=U9LZObhSn38YQSz0"
+                                target="_blank">Depressão e Suicídio na Adolescência | Stefany O. Pantaroto</a> - Brapsi
+                        </li>
                         <li>Palestra - Psicologia Baseada em Evidências - PsiVisionária</li>
-                        <li>Palestra presencial na Universidad Internacional Tres Fronteras (UNINTER) - Manejo em relação ao suicídio</li>
+                        <li>Palestra presencial na Universidad Internacional Tres Fronteras (UNINTER) - Manejo em
+                            relação ao suicídio</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <section id="midia" class="py-5">
         <div class="container text-center">
-            <h2 class="text-light mb-4">STEFANY O. PANTAROTO na Mídia</h2>
+            <h2 class="text-light mb-4">STEFANY O. Pantaroto na Mídia</h2>
             <div class="row justify-content-center">
                 <!-- Instagram -->
                 <div class="col-md-4 col-sm-12 midia-item">
@@ -196,7 +200,7 @@
                     </div>
                     <h4 class="text-light mt-3">Intagram</h4>
                 </div>
-    
+
                 <!-- Podcast -->
                 <div class="col-md-4 col-sm-12 midia-item">
                     <div class="device-frame tablet-frame">
@@ -204,7 +208,7 @@
                     </div>
                     <h4 class="text-light mt-3">Podcasts</h4>
                 </div>
-    
+
                 <!-- YouTube -->
                 <div class="col-md-4 col-sm-12 midia-item">
                     <div class="device-frame laptop-frame">
@@ -215,7 +219,7 @@
             </div>
         </div>
     </section>
-    
+
 
     <section id="pbe" data-aos="fade-right">
         <h2 class="m-4 text-center">O que é Prática Baseada em Evidências (PBE)?</h2>
@@ -329,10 +333,9 @@
                 </div>
         </div>
     </section>
-
-
-
-
+    <a type="button" class="floating-cart">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
     <footer id="footer" class="text-center py-3">
         <p>&copy; 2025 - Todos os direitos reservados. CRP: 1409140-9 </p>
     </footer>
@@ -340,6 +343,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
+
+
 </body>
 
 
