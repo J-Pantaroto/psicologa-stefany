@@ -9,8 +9,8 @@
 }
 
 #logo {
-    width: 80px;
-    height: 40px;
+    width: 70px;
+    height: 70px;
 }
 
 #agendar-header {
@@ -86,7 +86,7 @@
 }
 
 #hero {
-    background: linear-gradient(to left, #F3E9DC, rgba(0, 0, 0, 0.5)), url('../img/2.jpg');
+    background: linear-gradient(to left, #F3E9DC, rgba(0, 0, 0, 0.5)), url('../img/e2.jpg');
     background-size: cover;
     background-position: center;
     padding: 80px 0;
@@ -408,6 +408,7 @@ h2 {
 }
 
 .objective-text {
+    text-align: justify;
     font-size: 22px;
     font-weight: 400;
     line-height: 1.6;
@@ -535,18 +536,6 @@ b {
 }
 
 
-/* Grid de imagens secundárias */
-.mosaic-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-}
-
-.mosaic-grid img {
-    width: 100%;
-    border-radius: 10px;
-}
-
 /* Texto ao lado */
 .about-text {
     width: 45%;
@@ -654,8 +643,9 @@ b {
     margin: auto;
     overflow: hidden;
     border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
 }
+
 
 /* Diferentes tamanhos de dispositivos */
 .phone-frame {
@@ -686,7 +676,14 @@ b {
         margin-bottom: 40px;
     }
 }
-
+.midia-item a{
+    color: var(--font-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+.midia-item a:hover{
+    text-decoration: underline;
+}
 .floating-cart {
     position: fixed;
     bottom: 1.25rem;
